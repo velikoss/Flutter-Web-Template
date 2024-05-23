@@ -41,6 +41,10 @@
 
   <script>
     window.addEventListener('load', function(ev) {
+
+      // Gets default styles for browser (Using for fonts....)
+      localStorage.setItem('startStyle', JSON.stringify(getComputedStyle(document.documentElement)));
+
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
